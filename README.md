@@ -1,6 +1,6 @@
 <!-- Add your project banner here -->
 <p align="center">
-  <img src="your-banner-image-url" alt="Flask Backend Project">
+  <img src="https://realpython.com/cdn-cgi/image/width=1920,format=auto/https://files.realpython.com/media/Flask-by-Example-Setting-up-Postgres-SQLAlchemy-and-Alembic_Watermarked.0cbf10a02bca.jpg" alt="Flask Backend Project">
 </p>
 
 <!-- Project Title -->
