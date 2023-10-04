@@ -119,3 +119,30 @@ def edit_student(sid):
                 conn.commit()
         conn.close()  # Close the connection after all database operations
         return f"Records for the studentID {student_dict['studentid']} have been updated"
+
+
+@app.route('/courses')
+def courses():
+    conn = sqlite3.connect('students.db')
+    c = conn.cursor()
+    c.execute("SELECT * FROM scores")
+    scores_list = c.fetchall()
+    course_codes = ['CHEM101', 'PHYS101', 'MATH101']
+    course_details = []
+    for each_course in course_codes:
+        course_dict = {'name': each_course,
+                       'average': 0.0,
+                       'num_students': 0,
+                       'passed': 0}
+
+        for each_score in scores_list:
+            if each_course == each_score[1]:
+                course_dict['num_students'] += 1
+                course_dict['average'] += each_score[2]
+                if each_score[2] >= 50.0:
+                    course_dict['passed'] += 1
+        course_dict['average'] /= course_dict['num_students']
+        course_dict['average'] = round(course_dict['average'], 2)
+        course_details.append(course_dict)
+    conn.close()
+    return render_template('course_info.html', course_details=course_details)

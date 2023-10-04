@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="jumbotron text-center">
     <h1>Student Add Page</h1>
     <form action="" method="POST">
-       <p>Student Name<input type="text" name="studentname"/></p>
-       <p>Student ID<input type="text" name="id"/></p>
-       <p>Address<input type="text" name="address"/></p>
-       <p>Gender<input type="text" name="gender"/></p>
-       <p>Date of Birth<input type="text" name="dob"/></p>
-       <p>CHEM101<input type="text" name="chem101"/></p>
-       <p>MATH101<input type="text" name="math101"/></p>
-       <p>PHYS101<input type="text" name="phys101"/></p>
+       <p>Student Name<input class = 'form-control' type="text" name="studentname"/></p>
+       <p>Student ID<input class = 'form-control' type="text" name="id"/></p>
+       <p>Address<input class = 'form-control' type="text" name="address"/></p>
+       <p>Gender<input class = 'form-control' type="text" name="gender"/></p>
+       <p>Date of Birth<input class = 'form-control' type="text" name="dob"/></p>
+       <p>CHEM101<input class = 'form-control' type="text" name="chem101"/></p>
+       <p>MATH101<input class = 'form-control' type="text" name="math101"/></p>
+       <p>PHYS101<input class = 'form-control' type="text" name="phys101"/></p>
 
-       <p><button type="submit">SUBMIT</button></p>
+       <p><button class ='btn btn-primary' type="submit">SUBMIT</button></p>
     </form>
+    </div>
 {% endblock %}
