@@ -42,4 +42,3 @@ To get started with this project, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/kunalarya873/smallFlask
-   cd flask-backend-project
